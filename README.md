@@ -17,11 +17,10 @@ The Min-Max Scaling formula is:
 $$ x_{\text{scaled}} = \frac{x - \text{min}(x)}{\text{max}(x) - \text{min}(x)} $$
 
 where:
-- \( x \) is the original feature value.
-- \( \text{min}(x) \) is the minimum value of the feature.
-- \( \text{max}(x) \) is the maximum value of the feature.
-- \( x_{\text{scaled}} \) is the scaled feature value.
-
+- $ x $ is the original feature value.
+- $ \text{min}(x) $ is the minimum value of the feature.
+- $ \text{max}(x) $ is the maximum value of the feature.
+- $ x_{\text{scaled}} $ is the scaled feature value.
 ### Why Use Min-Max Scaling?
 
 - **Uniform Scale**: Ensures all features are on a similar scale, which is important for algorithms sensitive to feature scales, like gradient descent.
