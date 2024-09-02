@@ -1,11 +1,33 @@
-Sure! Here’s a concise and intuitive README file in Markdown format based on the provided code and the context of Min-Max Scaling:
 
-```markdown
 # Normalization (Min-Max Scaling) on Wine Dataset
 
 ## Overview
 
 This notebook demonstrates how to apply Min-Max Scaling to normalize the features of the Wine Quality dataset. Normalization is crucial for many machine learning algorithms that are sensitive to the scale of features.
+
+
+## Min-Max Scaling
+
+Min-Max Scaling, or normalization, transforms features to a common scale, typically [0, 1]. This is essential when features have different ranges, as it ensures that all features contribute equally to the model.
+
+### Mathematical Formula
+
+The Min-Max Scaling formula is:
+
+$$ x_{\text{scaled}} = \frac{x - \text{min}(x)}{\text{max}(x) - \text{min}(x)} $$
+
+where:
+- \( x \) is the original feature value.
+- \( \text{min}(x) \) is the minimum value of the feature.
+- \( \text{max}(x) \) is the maximum value of the feature.
+- \( x_{\text{scaled}} \) is the scaled feature value.
+
+### Why Use Min-Max Scaling?
+
+- **Uniform Scale**: Ensures all features are on a similar scale, which is important for algorithms sensitive to feature scales, like gradient descent.
+- **Improved Convergence**: Helps in faster convergence of optimization algorithms.
+- **Feature Comparability**: Makes it easier to compare and visualize the features.
+
 
 ## Code
 
@@ -38,28 +60,6 @@ df[columns] = mms.fit_transform(df[columns])
 df.head(10)
 df.describe()
 ```
-
-## Min-Max Scaling
-
-Min-Max Scaling, or normalization, transforms features to a common scale, typically [0, 1]. This is essential when features have different ranges, as it ensures that all features contribute equally to the model.
-
-### Mathematical Formula
-
-The Min-Max Scaling formula is:
-
-$$ x_{\text{scaled}} = \frac{x - \text{min}(x)}{\text{max}(x) - \text{min}(x)} $$
-
-where:
-- \( x \) is the original feature value.
-- \( \text{min}(x) \) is the minimum value of the feature.
-- \( \text{max}(x) \) is the maximum value of the feature.
-- \( x_{\text{scaled}} \) is the scaled feature value.
-
-### Why Use Min-Max Scaling?
-
-- **Uniform Scale**: Ensures all features are on a similar scale, which is important for algorithms sensitive to feature scales, like gradient descent.
-- **Improved Convergence**: Helps in faster convergence of optimization algorithms.
-- **Feature Comparability**: Makes it easier to compare and visualize the features.
 
 ## Conclusion
 
